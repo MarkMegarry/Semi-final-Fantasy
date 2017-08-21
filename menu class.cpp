@@ -1,7 +1,4 @@
-#include <iostream>
-using namespace std;
-
-int main()
+class menu
 {
  
   public:
