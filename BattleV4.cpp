@@ -237,23 +237,27 @@ int main()
   cout <<" /  \\ ||   [_ |   |   | |  ||_____||   _]  |  | |  |  ||  _  ||     |    |   _] |  _  ||  |  |  |  |  |  _  |/  \\ ||___, |"<< endl;
   cout <<" \\    ||     ||   |   | |  |       |  |    |  | |  |  ||  |  ||     |    |  |   |  |  ||  |  |  |  |  |  |  |\\    ||     |"<< endl;
   cout <<"  \\___||_____||___|___||____|      |__|   |____||__|__||__|__||_____|    |__|   |__|__||__|__|  |__|  |__|__| \\___||____/ "<< endl;
+  cout<<"Press enter to continue"<<endl;
+  cin.ignore();
   //Scenario explaination
+  system("clear");
   cout << "After entering through an unchecked window in the Eastern wall of the castle, you begin to walk down the dimly candle-lit hallway." << endl;
   cout << "Your path is blocked by a large knight, clad in armour as dark as night!" << endl;
-  usleep(3000000);
+  cout<<"Press enter to continue"<<endl;
+  cin.ignore();
   battle fight;
 
   while(fight.getPlayerHP() > 0 && fight.getEnemyHP()>0)
   {
   //Clear console
   //Displays main message after delay
-  usleep(2000000);
   system("clear");
   fight.mainMessage();
   //Takes user input
   fight.setInput();
   //Runs user input through switch statement
   fight.processInput();
+  usleep(2000000);
   }
   //Victory
   if (fight.getEnemyHP() <=0)
